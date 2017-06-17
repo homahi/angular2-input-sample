@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+
+  onClickChild1(event) {
+    alert(event);
+  }
+
+  onClickChild2(harano) {
+    alert(harano);
+  }
 }

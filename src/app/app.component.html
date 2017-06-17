@@ -1,3 +1,10 @@
 <h1>
   {{title}}
 </h1>
+<button (click)="childModal1.showModal()">child1を開く</button>
+<button (click)="childModal2.showModal()">child2を開く</button>
+
+<app-modal #childModal1 [message]='title' (exec)="onClickChild1($event)"></app-modal>
+<app-modal #childModal2 [message]='"こっちは違うモーダルです"' (exec)="onClickChild2(harano.value)"></app-modal>
+
+<input type="text" #harano>
